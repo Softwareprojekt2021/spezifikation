@@ -1,0 +1,46 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>640</x><y>310</y><w>120</w><h>120</h></coordinates><panel_attributes>Offer
+--
+title
+compensation_type
+price
+description
+sold
+category</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>130</y><w>100</w><h>130</h></coordinates><panel_attributes>User
+--
+first_name
+last_name
+password
+course
+profile_picture
+admin</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>330</y><w>100</w><h>40</h></coordinates><panel_attributes>Picture
+--
+picture</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>130</y><w>100</w><h>60</h></coordinates><panel_attributes>Message
+--
+message
+timestamp</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>660</x><y>170</y><w>100</w><h>30</h></coordinates><panel_attributes>Chat</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>160</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=1
+ist Teil von</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>Relation</id><coordinates><x>750</x><y>340</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=1
+ist Darstellung von</panel_attributes><additional_attributes>10;20;120;20</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>190</y><w>80</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=1
+ist Thema</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>160</y><w>140</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=1
+nimmt Teil an</panel_attributes><additional_attributes>120;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>450</x><y>250</y><w>210</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..n
+bietet an</panel_attributes><additional_attributes>10;10;10;140;190;140</additional_attributes></element><element><id>UMLClass</id><coordinates><x>180</x><y>130</y><w>100</w><h>50</h></coordinates><panel_attributes>University
+--
+university</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>140</y><w>200</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=1
+geht zu</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>530</x><y>250</y><w>140</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=0..n
+Ist auf Watchlist von</panel_attributes><additional_attributes>10;10;10;70;110;70</additional_attributes></element><element><id>Relation</id><coordinates><x>540</x><y>120</y><w>350</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=0..n
+m2=1
+hat geschrieben</panel_attributes><additional_attributes>330;20;10;20</additional_attributes></element></diagram>
