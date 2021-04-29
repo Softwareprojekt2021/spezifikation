@@ -1,0 +1,614 @@
+openapi: 3.0.3
+info:
+  title: Studibörse
+  description: "This is the REST API specifiction for the application Studibörse"
+  version: 1.0.0
+servers:
+- url: "http://127.0.0.1:8000"
+  description: "Development server"
+paths:
+  /login:
+    post:
+      tags: 
+        - Login
+      summary: Get the authorize bearer token
+      responses:
+        200:
+          description: JWT
+          content:
+            text/plain:
+              schema:
+                type: string
+        404:
+          $ref: "#/components/responses/NotFound"
+  /users:
+    get:
+      summary: Get all users
+      tags: 
+        - User
+      responses:
+        200:
+          description: Get all users
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+  /user:
+    get:
+      summary: Get the logged in user
+      tags: 
+        - User
+      responses:
+        200:
+          description: Get the logged in user
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+    post:
+      summary: Create new user
+      tags:
+        - User
+      requestBody:
+        description: Create user with following details
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                placeholder:
+                  type: string
+      responses:
+        201:
+          description: The new created user
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+        409:
+          $ref: "#/components/responses/EntityAlreadyExist"
+    put:
+      summary: Update the logged in user
+      tags:
+        - User
+      requestBody:
+        description: parameters
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                placeholder:
+                  type: string
+      responses:
+        200:
+          description: Returns the User with the updated Data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        409:
+          $ref: "#/components/responses/EntityAlreadyExist"
+    delete:
+      summary: Delete the logged in user
+      tags:
+        - User
+      responses:
+        200:
+          $ref: "#/components/responses/Ok"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+ 
+  /user/{userId}:
+    parameters:
+      - $ref: "#/components/parameters/userId"
+    get:
+      tags:
+        - User
+      summary: Get the specified user
+      description: Returns the specified user
+      responses:
+        200:
+          description: User
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+    delete:
+      tags:
+        - User
+      summary: Delete the specified user
+      description: Deletes the user with the given userId
+      responses:
+        200:
+          $ref: "#/components/responses/Ok"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+          
+  /offer/{offerId}:
+    parameters:
+      - $ref: "#/components/parameters/offerId"
+    get:
+      tags:
+        - Offer
+      summary: Get the specified offer
+      description: Returns the specified offer
+      responses:
+        200:
+          description: Offer
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+    delete:
+      tags:
+        - Offer
+      summary: Delete the specified offer
+      description: Deletes the offer with the given offerId
+      responses:
+        200:
+          $ref: "#/components/responses/Ok"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+  /offer:
+    post:
+      tags:
+        - Offer
+      summary: Create offer
+      requestBody:
+        description: Returns the the created offer
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                placeholder:
+                  type: string
+      responses:
+        200:
+          description: created offer
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+    put:
+      tags:
+        - Offer
+      summary: Update offer
+      requestBody:
+        description: offer
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                placeholder:
+                  type: string
+      responses:
+        200:
+          description: updated offer
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+  /offers:
+    get:
+      tags:
+        - Offer
+      summary: Get all my created offers
+      responses:
+        200:
+          description: Ooffers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"    
+          
+  /offers/recommended:
+    get:
+      tags:
+        - Offer
+      summary: Get my recommended offers
+      responses:
+        200:
+          description: Recommended offers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+          
+  /offers/filtered:
+    post:
+      tags:
+        - Offer
+      summary: Get the filtered offers
+      requestBody:
+        description: Search parameters
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                searchText:
+                  type: string
+                location:
+                  type: string
+                offerType:
+                  type: string
+                minVendorRating:
+                  type: integer
+                
+      responses:
+        200:
+          description: The filtered offers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+       
+  /watchlist/{offerId}:
+    parameters:
+      - $ref: "#/components/parameters/offerId"
+    post:
+      tags:
+        - Watchlist
+      summary: Add offer to watchlist
+      requestBody:
+        description: Rating
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rating:
+                  type: integer
+                description:
+                  type: string
+      responses:
+        200:
+          $ref: "#/components/responses/Ok"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+    delete:
+      tags:
+        - Watchlist
+      summary: Delete offer from watchlist
+      responses:
+        200:
+          $ref: "#/components/responses/Ok"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+  /watchlist:
+    get:
+      tags:
+        - Watchlist
+      summary: Get all offers from watchlist
+      responses:
+        200:
+          description: Return 
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  text:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+          
+  /rating/{userId}:
+    parameters:
+      - $ref: "#/components/parameters/userId"
+    post:
+      tags:
+        - Rating
+      summary: Rate the seller
+      requestBody:
+        description: Rating
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rating:
+                  type: integer
+                description:
+                  type: string
+                
+      responses:
+        200:
+          $ref: "#/components/responses/Ok"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+    put:
+      tags:
+        - Rating
+      summary: Update the rating
+      requestBody:
+        description: Rating
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                rating:
+                  type: integer
+                description:
+                  type: string
+                
+      responses:
+        200:
+          $ref: "#/components/responses/Ok"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+    get:
+      tags:
+        - Rating
+      summary: Get the rating of seller
+      responses:
+        200:
+          description: Return 
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  text:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+    delete:
+      tags:
+        - Rating
+      summary: Delete the rating
+      responses:
+        200:
+          $ref: "#/components/responses/Ok"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+          
+  /message/{userId}:
+    parameters:
+      - $ref: "#/components/parameters/userId"
+    post:
+      tags:
+        - Message
+      summary: Send message
+      requestBody:
+        description: Rating
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                
+      responses:
+        200:
+          description: Return the sent message
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  text:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+    get:
+      tags:
+        - Message
+      summary: Return the conversation with the given userId
+      responses:
+        200:
+          description: Return all messages
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  text:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+
+  /message/{messageId}:
+    parameters:
+      - $ref: "#/components/parameters/messageId"
+    delete:
+      tags:
+        - Message
+      summary: Delete the message with the given messageId
+      responses:
+        200:
+          $ref: "#/components/responses/Ok"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+
+  /messages:
+    get:
+      tags:
+        - Message
+      summary: Get all conversations from the logged in user
+      responses:
+        200:
+          description: Return 
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  text:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+          
+  /messages/{userId}:
+    parameters:
+      - $ref: "#/components/parameters/userId"
+    delete:
+      tags:
+        - Message
+      summary: Delete the conversation with the given userId
+      responses:
+        200:
+          $ref: "#/components/responses/Ok"
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+
+components:
+  parameters:
+    userId:
+      name: userId
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int32
+    offerId:
+      name: offerId
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int32
+    messageId:
+      name: messageId
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int32
+        
+  responses:
+    Ok:
+      description: Operation was successfull
+      content:
+        text/plain:
+          schema:
+            type: string
+    EntityAlreadyExist:
+      description: Entity already exist
+      content:
+        text/plain:
+          schema:
+            type: string
+    NotFound:
+      description: Entity not found.
+      content:
+        text/plain:
+          schema:
+            type: string
+    IllegalInput:
+      description: Illegal input for operation.
+    Unauthorized:
+      description: You are not authorized for this action
+      content:
+        text/plain:
+          schema:
+            type: string
