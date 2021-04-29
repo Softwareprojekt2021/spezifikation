@@ -286,27 +286,29 @@ paths:
           $ref: "#/components/responses/NotFound"
           
   /offers/filtered:
-    post:
+    get:
       tags:
         - Offer
       summary: Get the filtered offers
-      requestBody:
-        description: Search parameters
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                searchText:
-                  type: string
-                location:
-                  type: string
-                offerType:
-                  type: string
-                minVendorRating:
-                  type: integer
-                
+      parameters:
+        - in: query
+          name: searchText
+          schema:
+            type: string
+        - in: query
+          name: location
+          schema:
+            type: string
+        - in: query
+          name: offerType
+          schema:
+            type: string
+        - in: query
+          name: minVendorRating
+          schema:
+            type: integer
+            format: int32
+                  
       responses:
         200:
           description: The filtered offers
@@ -584,6 +586,7 @@ components:
       schema:
         type: integer
         format: int32
+        
         
   responses:
     Ok:
