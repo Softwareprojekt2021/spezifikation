@@ -4,97 +4,46 @@
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>360</x>
-      <y>0</y>
-      <w>240</w>
-      <h>140</h>
+      <x>350</x>
+      <y>100</y>
+      <w>260</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>&lt;&lt;device&gt;&gt;
-MariaDB Server</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>400</x>
-      <y>60</y>
-      <w>150</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;artefact&gt;&gt;
-Studibörse Database</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>390</x>
-      <y>300</y>
-      <w>170</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;artifact&gt;&gt;
-Studibörse Backend
-Service</panel_attributes>
+Datenbank Server</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
       <x>350</x>
-      <y>240</y>
+      <y>290</y>
       <w>260</w>
-      <h>150</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>&lt;&lt;device&gt;&gt;
-Python Flask/Django</panel_attributes>
+Backend Server</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>710</x>
-      <y>240</y>
-      <w>260</w>
-      <h>150</h>
+      <x>670</x>
+      <y>290</y>
+      <w>250</w>
+      <h>100</h>
     </coordinates>
     <panel_attributes>&lt;&lt;device&gt;&gt;
-VueJS</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>750</x>
-      <y>300</y>
-      <w>170</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;artifact&gt;&gt;
-Studibörse Frontend
-Service</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>740</x>
-      <y>620</y>
-      <w>170</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;artifact&gt;&gt;
-Studibörse
-Website</panel_attributes>
+Frontend Web Server</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>700</x>
+      <x>660</x>
       <y>540</y>
       <w>260</w>
-      <h>160</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;device&gt;&gt;
 Browser
@@ -102,25 +51,12 @@ Browser
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>360</x>
-      <y>620</y>
-      <w>170</w>
-      <h>70</h>
-    </coordinates>
-    <panel_attributes>&lt;&lt;artifact&gt;&gt;
-Studibörse
-Mobile App</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>UMLDeployment</id>
     <coordinates>
-      <x>320</x>
-      <y>550</y>
+      <x>340</x>
+      <y>540</y>
       <w>260</w>
-      <h>160</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>&lt;&lt;device&gt;&gt;
 Mobile (Android, iOS)</panel_attributes>
@@ -129,45 +65,46 @@ Mobile (Android, iOS)</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>440</x>
+      <x>380</x>
       <y>380</y>
-      <w>30</w>
-      <h>190</h>
+      <w>120</w>
+      <h>180</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+    <panel_attributes>HTTPS (JSON)
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>520</x>
       <y>380</y>
-      <w>300</w>
+      <w>220</w>
       <h>180</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;100.0;280.0;100.0;280.0;160.0</additional_attributes>
+    <panel_attributes>HTTPS (JSON)</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0;200.0;100.0;200.0;160.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>830</x>
+      <x>740</x>
       <y>380</y>
-      <w>30</w>
+      <w>240</w>
       <h>180</h>
     </coordinates>
-    <panel_attributes/>
+    <panel_attributes>HTTPS (HTML, CSS, JavaScript)</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>470</x>
-      <y>130</y>
-      <w>30</w>
-      <h>130</h>
+      <y>190</y>
+      <w>100</w>
+      <h>120</h>
     </coordinates>
-    <panel_attributes/>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <panel_attributes>TCP (SQL)</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
 </diagram>
