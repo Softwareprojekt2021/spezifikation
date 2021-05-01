@@ -2,54 +2,69 @@
 <diagram program="umlet" version="14.3.0">
   <zoom_level>10</zoom_level>
   <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>690</x>
+      <y>460</y>
+      <w>220</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>Angebot
+als verkauft
+markieren</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
     <id>UMLActor</id>
     <coordinates>
-      <x>510</x>
-      <y>470</y>
+      <x>520</x>
+      <y>510</y>
       <w>80</w>
       <h>110</h>
     </coordinates>
-    <panel_attributes>Benutzer</panel_attributes>
+    <panel_attributes>Anbieter</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>680</x>
-      <y>360</y>
-      <w>120</w>
-      <h>40</h>
+      <x>690</x>
+      <y>380</y>
+      <w>220</w>
+      <h>60</h>
     </coordinates>
-    <panel_attributes>Login</panel_attributes>
+    <panel_attributes>Angebot
+erstellen</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>680</x>
-      <y>500</y>
-      <w>120</w>
+      <x>690</x>
+      <y>540</y>
+      <w>230</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Registrieren</panel_attributes>
+    <panel_attributes>Angebot
+aktualisieren</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>370</y>
+      <x>570</x>
+      <y>400</y>
       <w>140</w>
-      <h>160</h>
+      <h>170</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;140.0;120.0;10.0</additional_attributes>
+    <additional_attributes>10.0;150.0;120.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>490</y>
+      <x>570</x>
+      <y>530</y>
       <w>140</w>
       <h>50</h>
     </coordinates>
@@ -57,36 +72,25 @@
     <additional_attributes>10.0;20.0;120.0;30.0</additional_attributes>
   </element>
   <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>680</x>
-      <y>430</y>
-      <w>120</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>Abmelden</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>440</y>
+      <x>570</x>
+      <y>470</y>
       <w>140</w>
-      <h>90</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes/>
-    <additional_attributes>10.0;70.0;120.0;10.0</additional_attributes>
+    <additional_attributes>10.0;80.0;120.0;15.0</additional_attributes>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>660</x>
-      <y>300</y>
-      <w>160</w>
-      <h>420</h>
+      <x>670</x>
+      <y>340</y>
+      <w>260</w>
+      <h>400</h>
     </coordinates>
-    <panel_attributes>Benutzerverwaltung
+    <panel_attributes>Angebotsverwaltung
 --
 bg=none</panel_attributes>
     <additional_attributes/>
@@ -94,35 +98,21 @@ bg=none</panel_attributes>
   <element>
     <id>UMLUseCase</id>
     <coordinates>
-      <x>680</x>
-      <y>570</y>
-      <w>120</w>
+      <x>690</x>
+      <y>610</y>
+      <w>230</w>
       <h>40</h>
     </coordinates>
-    <panel_attributes>Account löschen
-
-layer=1</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLUseCase</id>
-    <coordinates>
-      <x>680</x>
-      <y>630</y>
-      <w>120</w>
-      <h>50</h>
-    </coordinates>
-    <panel_attributes>Daten
-aktualisieren
-
+    <panel_attributes>Angebot
+löschen
 layer=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>500</y>
+      <x>570</x>
+      <y>540</y>
       <w>140</w>
       <h>170</h>
     </coordinates>
@@ -132,12 +122,25 @@ layer=1</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>500</y>
+      <x>570</x>
+      <y>540</y>
       <w>140</w>
       <h>110</h>
     </coordinates>
     <panel_attributes/>
     <additional_attributes>10.0;10.0;120.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>690</x>
+      <y>670</y>
+      <w>230</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Bilder
+hinzufügen
+layer=1</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>

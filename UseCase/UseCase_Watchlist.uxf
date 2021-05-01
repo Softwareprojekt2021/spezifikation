@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>620</x>
+      <y>400</y>
+      <w>200</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Angebote in der
+Watchlist speichern</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>450</x>
+      <y>430</y>
+      <w>80</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Benutzer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>430</y>
+      <w>130</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>110.0;10.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>590</x>
+      <y>350</y>
+      <w>270</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>Watchlist
+--
+bg=none</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>620</x>
+      <y>480</y>
+      <w>200</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>Angebote aus
+der Watchlist
+löschen
+
+layer=1</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>510</x>
+      <y>460</y>
+      <w>130</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>110.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
