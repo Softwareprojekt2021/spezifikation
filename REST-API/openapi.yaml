@@ -21,6 +21,23 @@ paths:
                 type: string
         404:
           $ref: "#/components/responses/NotFound"
+  
+  /universities:
+    get:
+      summary: Get all Universities
+      tags: 
+        - User
+      responses:
+        200:
+          description: Get all Universities
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+          
   /users:
     get:
       summary: Get all users
