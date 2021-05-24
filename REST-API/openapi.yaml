@@ -262,6 +262,28 @@ paths:
           $ref: "#/components/responses/Unauthorized"
         404:
           $ref: "#/components/responses/NotFound"
+          
+                  
+  /offer/categories:
+    get:
+      tags:
+        - Offer
+      summary: Get the categories for offer
+      responses:
+        200:
+          description: Offers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  placeholder:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"      
+        
   /offers:
     get:
       tags:
