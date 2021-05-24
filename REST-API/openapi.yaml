@@ -264,7 +264,7 @@ paths:
           $ref: "#/components/responses/NotFound"
           
                   
-  /offer/categories:
+  /categories:
     get:
       tags:
         - Offer
