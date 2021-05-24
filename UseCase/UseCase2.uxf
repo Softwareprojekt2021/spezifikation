@@ -21,7 +21,8 @@
       <h>70</h>
     </coordinates>
     <panel_attributes>Angebote
-filtern</panel_attributes>
+filtern
+layer=1</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -59,7 +60,6 @@ bg=none</panel_attributes>
     <panel_attributes>Gegenstände kaufen
 oder mit dem
 Verkäufer tauschen
-
 layer=1</panel_attributes>
     <additional_attributes/>
   </element>
@@ -108,7 +108,6 @@ layer=1</panel_attributes>
     </coordinates>
     <panel_attributes>Angebote nach
 einen Suchtext suchen
-
 layer=1</panel_attributes>
     <additional_attributes/>
   </element>
