@@ -501,13 +501,46 @@ paths:
         404:
           $ref: "#/components/responses/NotFound"
           
-  /message/{userId}:
+  /message/{offerId}/create:
     parameters:
-      - $ref: "#/components/parameters/userId"
+      - $ref: "#/components/parameters/offerId"
     post:
       tags:
         - Message
-      summary: Send message
+      summary: Create Chat
+      requestBody:
+        description: Rating
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                
+      responses:
+        200:
+          description: Returns the created chat
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  text:
+                    type: string
+        401:
+          $ref: "#/components/responses/Unauthorized"
+        404:
+          $ref: "#/components/responses/NotFound"
+          
+  /message/{chatId}:
+    parameters:
+      - $ref: "#/components/parameters/chatId"
+    post:
+      tags:
+        - Message
+      summary: Send message in Chat
       requestBody:
         description: Rating
         required: true
@@ -536,7 +569,7 @@ paths:
     get:
       tags:
         - Message
-      summary: Return the conversation with the given userId
+      summary: Return all Messages in Chat
       responses:
         200:
           description: Return all messages
@@ -552,13 +585,14 @@ paths:
         404:
           $ref: "#/components/responses/NotFound"
 
-  /message/{messageId}:
+  /message/{chatId}/{messageId}:
     parameters:
+      - $ref: "#/components/parameters/chatId"
       - $ref: "#/components/parameters/messageId"
     delete:
       tags:
         - Message
-      summary: Delete the message with the given messageId
+      summary: Deletes a Message in Chat
       responses:
         200:
           $ref: "#/components/responses/Ok"
@@ -571,7 +605,7 @@ paths:
     get:
       tags:
         - Message
-      summary: Get all conversations from the logged in user
+      summary: Get all Chats
       responses:
         200:
           description: Return 
@@ -587,13 +621,13 @@ paths:
         404:
           $ref: "#/components/responses/NotFound"
           
-  /messages/{userId}:
+  /messages/{chatId}:
     parameters:
-      - $ref: "#/components/parameters/userId"
+      - $ref: "#/components/parameters/chatId"
     delete:
       tags:
         - Message
-      summary: Delete the conversation with the given userId
+      summary: Delete Chat
       responses:
         200:
           $ref: "#/components/responses/Ok"
@@ -620,6 +654,13 @@ components:
         format: int32
     messageId:
       name: messageId
+      in: path
+      required: true
+      schema:
+        type: integer
+        format: int32
+    chatId:
+      name: chatId
       in: path
       required: true
       schema:
